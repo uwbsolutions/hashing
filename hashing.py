@@ -30,7 +30,7 @@ def delete(value,hash,table):
 	table[hash(value)].remove(value)
 
 def search(value,hash,table):
-	print('liczba ', value, 'jest na pozycji: ', table[hash(value)].index(value)+1 , 'w kolumnie: ', hashing_fun(value)+1 )
+	print('liczba ', value, 'jest na pozycji: ', table[hash(value)].index(value)+1 , 'w kolumnie: ', hash(value)+1 )
 
 def insert_linear(value,hash,table):
 	index=hash(value) 
@@ -88,6 +88,7 @@ for j in range(tabsize):
 	if(max<len(table_chain_hash1[j])):
 		max=len(table_chain_hash1[j])
 #maksymalna dlugosc listy
+search(133034235868,hashing_fun,table_chain_hash1)
 
 print('Maksymalna dlugosc listy przy haszowaniu 1 metoda:', max)
 print("Srednia dlugosc listow przy haszowaniu 1 metoda: {0:.2f}".format(listslen/numoflists))
